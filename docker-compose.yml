@@ -33,7 +33,7 @@ services:
       - app-network
   
   app:
-    image: ghcr.io/kma-custom-nextcloud/nextcloud-server:22
+    image: ghcr.io/nguyenduongnhj/nextcloud-server:22
     restart: always
     ports:
       - 8080:80
