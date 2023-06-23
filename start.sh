@@ -6,6 +6,7 @@ ROOT_PATH="$PWD"
 FOLDER_APPS_PATH="$PWD/.data/server/apps"
 
 sudo apt update && sudo apt upgrade
+apt install zip unzip php-zip
  
 #replace private ip
 # sed -i 's/original/new/g' file.txt
@@ -49,10 +50,10 @@ sudo apt install make
 #install docker
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu lsb_release -cs test"
+#sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu lsb_release -cs test"
 sudo apt update
 sudo apt install docker-ce
-cat ./docker-hub.txt |sudo docker login --username duyhoan1710 --password-stdin
+cat ./docker-hub.txt |sudo docker login --username nguyenduongnhj --password-stdin
 
 #install docker-compose
 sudo apt-get install docker-compose
