@@ -6,7 +6,6 @@ ROOT_PATH="$PWD"
 FOLDER_APPS_PATH="$PWD/.data/server/apps"
 
 sudo apt update && sudo apt upgrade
-apt install zip unzip php-zip
  
 #replace private ip
 # sed -i 's/original/new/g' file.txt
@@ -16,7 +15,7 @@ sudo apt-get purge 'php*' -y
 sudo apt autoremove -y
 
 #install php 8
-sudo apt install  ca-certificates apt-transport-https software-properties-common
+sudo apt install ca-certificates apt-transport-https software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt install php8.0 -y
 sudo apt install php8.0-dom
@@ -37,23 +36,23 @@ sudo apt install git
 sudo apt install make
 
 #install nvm
-# sudo apt install curl
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+ sudo apt install curl
+ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+ export NVM_DIR="$HOME/.nvm"
+ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+ [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #install node
-# nvm install 16.13.1
+ghcr.io/nguyenduongnhj/nextcloud-server-stable26:22 nvm install 16.13.1
 
 #install docker
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu lsb_release -cs test"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu lsb_release -cs test"
 sudo apt update
 sudo apt install docker-ce
-cat ./docker-hub.txt |sudo docker login --username nguyenduongnhj --password-stdin
+cat ./docker-hub.txt |sudo docker login --username duyhoan1710 --password-stdin
 
 #install docker-compose
 sudo apt-get install docker-compose
